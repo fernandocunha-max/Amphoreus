@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gameplay | Amphoreus</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #100e18;
+      color: #f5f0e6;
+    }
+
+    .navbar {
+      background-color: #191526 !important;
+      border-bottom: 1px solid #a88b4a;
+    }
+
+    .navbar-brand,
+    .titulo-amphoreus {
+      color: #d9bd78 !important;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #e4dced !important;
+    }
+
+    .nav-link:hover {
+      color: #d9bd78 !important;
+    }
+
+    .card-skill {
+      background-color: #191526;
+      border: 1px solid #a88b4a;
+      color: #f5f0e6;
+      height: 100%;
+    }
+
+    .card-skill img {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      padding: 10px;
+    }
+
+    .card-skill .card-title {
+      color: #d9bd78;
+    }
+
+    .card-skill .card-body {
+      text-align: center;
+    }
+
+    .card-skill .btn {
+      display: block;
+      width: fit-content;
+      margin: 15px auto 0;
+    }
+
+    .modal-content {
+      background-color: #191526;
+      color: #f5f0e6;
+      border: 1px solid #a88b4a;
+    }
+
+    .modal-title {
+      color: #d9bd78;
+    }
+
+    .modal-skill-img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+    }
+
+  
+    #carrosselPersonagens .carousel-item>h2 {
+      text-align: center;
+      padding: 10px 58px;
+      min-height: 65px;
+    }
+
+    #carrosselPersonagens .carousel-control-prev,
+    #carrosselPersonagens .carousel-control-next {
+      top: 0;
+      bottom: auto;
+      width: 55px;
+      height: 65px;
+      opacity: 0.9;
+    }
+
+    #carrosselPersonagens .carousel-control-prev-icon,
+    #carrosselPersonagens .carousel-control-next-icon {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">AMPHOREUS</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu"
+        aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="personagens.html">Personagens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="gameplay.html">Gameplay</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Explorar</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+              <li><a class="dropdown-item" href="index.html">Início</a></li>
+              <li><a class="dropdown-item" href="personagens.html">Personagens</a></li>
+              <li><a class="dropdown-item" href="gameplay.html">Gameplay</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <header class="text-center mb-5">
+      <h1 class="titulo-amphoreus">Gameplay</h1>
+      <p class="text-secondary">Conheça as habilidades e animações dos personagens de Amphoreus.</p>
+    </header>
+
+    <!-- Carrossel -->
+     <!-- Phainon -->
+    <div id="carrosselPersonagens" class="carousel slide" data-bs-interval="false">
+      <div class="carousel-inner rounded-4">
+        <div class="carousel-item active">
+          <h2 class="titulo-amphoreus mb-4">Phainon</h2>
+
+          <section class="row g-4">
+           
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/phainon basic.gif" alt="Ataque básico de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Animação do ataque básico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonBasica">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+           
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/phainon percia.gif" alt="Perícia de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonPercia">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+            
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/phainon tec.gif" alt="Técnica de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Veja a técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonTecnica">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+          
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/phainonsupremo.gif" alt="Forma suprema de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonSupremo">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+            
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/basicoult.gif" alt="Ataque e ultimate de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque basico V2</h3>
+                  <p class="card-text">Ataque basico Aprimorado.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonUlt">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+            
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/counter.gif" alt="Contra-ataque de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Counter</h3>
+                  <p class="card-text">Counter.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonCounter">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+
+          
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/pericia 2.gif" alt="Perícia alternativa de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia V2</h3>
+                  <p class="card-text">Pericia V2.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonPercia2">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+
+            
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/phainon/talento phai.webp" alt="Talento de Phainon">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#skillPhainonTalento">Examinar skill</button>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!-- Mydei -->
+        </div>
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Mydei</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/baisco my.gif" alt="Ataque básico de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque Basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill1">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/pericia my.gif" alt="Perícia de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill2">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/pericia 2 my.gif" alt="Perícia V2 de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia V2</h3>
+                  <p class="card-text">Pericia aprimorada.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill3">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/pericia 3 my.gif" alt="Perícia V3 de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia V3</h3>
+                  <p class="card-text">Pericia Ativada por condições especiais.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill4">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/talento my.gif" alt="Talento de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill5">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/tec my.gif" alt="Técnica de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill6">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/mydei/ult my.gif" alt="Supremo de Mydei" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill7">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Castorice -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Castorice</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/baisco casto.gif" alt="Ataque básico de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico e Pericia</h3>
+                  <p class="card-text">Ataque Basico e Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill8">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/garrinha.gif" alt="Garrinha de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Pericia de Memoespirito</h3>
+                  <p class="card-text">Baforada com o Dragão.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill9">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/percicia garra.gif" alt="Perícia da garra de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia aprimorada</h3>
+                  <p class="card-text">Ataque com Garras.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill10">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/reviver.gif" alt="Reviver de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Reviver</h3>
+                  <p class="card-text">Revive aliados cujo PV chegues a 0.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill11">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/talento dragão.gif" alt="Talento do dragão de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento do Memoespirito</h3>
+                  <p class="card-text">Explode.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill12">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/tec casto.gif" alt="Técnica de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill13">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/castorice/ult casto.gif" alt="Supremo de Castorice" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill14">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Aglaea -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Aglaea</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla basic.gif" alt="Ataque básico de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill15">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla basic2.gif" alt="Ataque básico V2 de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico V2</h3>
+                  <p class="card-text">Ataque Basico Aprimorado.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill16">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla pericia memo.gif" alt="Perícia do Memosprite de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia do Memoespirito</h3>
+                  <p class="card-text">Habilidade do Memoespirito.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill17">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla skill.gif" alt="Perícia de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill18">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla talento memo.webp" alt="Talento do Memosprite de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento do Memoespirito</h3>
+                  <p class="card-text">Talento do Memoespirito.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill19">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla talento.webp" alt="Talento de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill20">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla tec.gif" alt="Técnica de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">tecnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill21">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/aglaea/agla ult.gif" alt="Supremo de Aglaea" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill22">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Anaxa -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Anaxa</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/anaxa]/anaxa basic.gif" alt="Ataque básico de Anaxa" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque Basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill23">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/anaxa]/anaxa pericia.gif" alt="Perícia de Anaxa" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill24">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/anaxa]/anaxa tec.gif" alt="Técnica de Anaxa" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Tecnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill25">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/anaxa]/anaxa ult.gif" alt="Supremo de Anaxa" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill26">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/anaxa]/talento anaxa.gif" alt="Talento de Anaxa" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill27">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Cerydra -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Cerydra</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cerydra/cerydra basic.gif" alt="Ataque básico de Cerydra" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque Basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill28">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cerydra/cerydra skilllgif.gif" alt="Perícia de Cerydra" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill29">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cerydra/cerydra ult.gif" alt="Supremo de Cerydra" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill30">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cerydra/talento cerydra.webp" alt="Talento de Cerydra" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill31">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cerydra/tec cerydra.gif" alt="Técnica de Cerydra" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill32">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Cipher -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Cipher</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cipher/cipher basic.gif" alt="Ataque básico de Cipher" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque Basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill33">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cipher/cipher pericia.gif" alt="Perícia de Cipher" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill34">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cipher/cipher talento.gif" alt="Talento de Cipher" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill35">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cipher/cipher tecnica.gif" alt="Técnica de Cipher" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Tecnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill36">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cipher/cipher ult.gif" alt="Supremo de Cipher" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill37">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Cyrene -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Cyrene</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy basic.gif" alt="Ataque básico de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque Básico</h3>
+                  <p class="card-text">Ataque Basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill38">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy pericia.gif" alt="Perícia de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill39">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy talento memo.webp" alt="Talento do Memosprite de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento do Memoespirito</h3>
+                  <p class="card-text">Talento do Memoespirito .</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill40">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy talento.webp" alt="Talento de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill41">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy tec.gif" alt="Técnica de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Tecnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill42">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/cy ult.gif" alt="Supremo de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill43">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/pericia memo.gif" alt="Perícia do Memosprite de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia do Memoespirito</h3>
+                  <p class="card-text">Perícia do Memoespirito V2.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill45">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/cyrene/pericia memo 2.gif" alt="Perícia do Memosprite V2 de Cyrene" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia do Memoespirito V2</h3>
+                  <p class="card-text">Perícia do Memosprite V2.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill44">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- dan heng (o miór) -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Dan Heng</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/dan heng/dan basico.gif" alt="Ataque básico de Dan Heng" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque basico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill46">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/dan heng/dan pericia.gif" alt="Perícia de Dan Heng" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill47">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/dan heng/dan talento.gif" alt="Talento de Dan Heng" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill48">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/dan heng/dan tecnica.gif" alt="Técnica de Dan Heng" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill49">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/dan heng/dan ult.gif" alt="Supremo de Dan Heng" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill50">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Evernight -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Evernight</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever basic.gif" alt="Ataque básico de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque básico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill51">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever memo skill.gif" alt="Perícia do Memosprite de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia do Memosprite</h3>
+                  <p class="card-text">Habilidade de Evernight.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill53">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever memo skill 2.gif" alt="Perícia do Memosprite V2 de Evernight"
+                  loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia do Memosprite V2</h3>
+                  <p class="card-text">Habilidade de Evernight.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill52">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever skill.gif" alt="Perícia de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Pericia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill54">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever talento memo.webp" alt="Talento do Memosprite de Evernight"
+                  loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento do Memoespirito</h3>
+                  <p class="card-text">Talento do Memoespirito.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill55">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever talento.gif" alt="Talento de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill56">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/ever ult.gif" alt="Supremo de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill57">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/evernight/tec ever.gif" alt="Técnica de Evernight" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill58">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Hyahya -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Hyacine</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya basic.gif" alt="Ataque básico de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque básico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill59">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya skill.gif" alt="Perícia de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Perícia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill60">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya talento e memo.gif" alt="Talento do Memosprite de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento do Memoespirito</h3>
+                  <p class="card-text">Talento do Memoespirito.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill61">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya talento ica.gif" alt="Talento de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill62">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya tec.gif" alt="Técnica de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill63">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hyacine/hya ult.gif" alt="Supremo de Hyacine" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill64">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- hysilens -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Hysilens</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hysilens/hyse basic.gif" alt="Ataque básico de Hysilens" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque básico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill65">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hysilens/hyse skill.gif" alt="Perícia de Hysilens" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Perícia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill66">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hysilens/hyse talento.webp" alt="Talento de Hysilens" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill67">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hysilens/hyse tec1.gif" alt="Técnica de Hysilens" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill68">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/hysilens/hyse ult.gif" alt="Supremo de Hysilens" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill69">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Tribbie -->
+        <div class="carousel-item">
+          <h2 class="titulo-amphoreus mb-4">Tribbie</h2>
+          <section class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/tribbie/tribbie basic.gif" alt="Ataque básico de Tribbie" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ataque básico</h3>
+                  <p class="card-text">Ataque básico.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill70">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/tribbie/tribbie skill.gif" alt="Perícia de Tribbie" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Perícia</h3>
+                  <p class="card-text">Perícia.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill71">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/tribbie/tribbie talento.gif" alt="Talento de Tribbie" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Talento</h3>
+                  <p class="card-text">Talento.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill72">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/tribbie/tribbie tec.gif" alt="Técnica de Tribbie" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Técnica</h3>
+                  <p class="card-text">Técnica.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill73">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <article class="card card-skill">
+                <img src="SKILLS/tribbie/tribbie ult.gif" alt="Supremo de Tribbie" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title h5">Ultimate</h3>
+                  <p class="card-text">Ultimate.</p>
+                  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalSkill74">
+                    Examinar skill
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPersonagens" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrosselPersonagens" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+    <!-- Modais: cada botão abre sua própria imagem -->
+    <div class="modal fade" id="skillPhainonBasica" tabindex="-1" aria-labelledby="tituloPhainonBasica"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonBasica">Phainon — Ataque básico</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/phainon basic.gif"
+              alt="Ataque básico de Phainon"></div>
+        </div>
+      </div>
+    </div>
+<!-- Modais de cada um -->
+ <!-- Phainon -->
+    <div class="modal fade" id="skillPhainonPercia" tabindex="-1" aria-labelledby="tituloPhainonPercia"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonPercia">Phainon — Perícia</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/phainon percia.gif"
+              alt="Perícia de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonTecnica" tabindex="-1" aria-labelledby="tituloPhainonTecnica"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonTecnica">Phainon — Técnica</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/phainon tec.gif"
+              alt="Técnica de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonCounter" tabindex="-1" aria-labelledby="tituloPhainonCounter"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonCounter">Phainon — Counter</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/counter.gif"
+              alt="Contra-ataque de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonPercia2" tabindex="-1" aria-labelledby="tituloPhainonPercia2"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonPercia2">Phainon — Perícia V2</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/pericia 2.gif"
+              alt="Perícia alternativa de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonUlt" tabindex="-1" aria-labelledby="tituloPhainonUlt" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonUlt">Phainon — Ataque Basico V2</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/basicoult.gif"
+              alt="Ataque e ultimate de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonSupremo" tabindex="-1" aria-labelledby="tituloPhainonSupremo"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonSupremo">Phainon — Ultimate</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/phainonsupremo.gif"
+              alt="Forma suprema de Phainon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="skillPhainonTalento" tabindex="-1" aria-labelledby="tituloPhainonTalento"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloPhainonTalento">Phainon — Talento</h5><button type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center"><img class="modal-skill-img" src="SKILLS/phainon/talento phai.webp"
+              alt="Talento de Phainon"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Mydei -->
+    <div class="modal fade" id="modalSkill1" tabindex="-1" aria-label="Mydei — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/baisco my.gif" alt="Mydei — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill2" tabindex="-1" aria-label="Mydei — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/pericia my.gif" alt="Mydei — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill3" tabindex="-1" aria-label="Mydei — Perícia V2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Perícia V2</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/pericia 2 my.gif" alt="Mydei — Perícia V2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill4" tabindex="-1" aria-label="Mydei — Perícia V3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Perícia V3</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/pericia 3 my.gif" alt="Mydei — Perícia V3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill5" tabindex="-1" aria-label="Mydei — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/talento my.gif" alt="Mydei — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill6" tabindex="-1" aria-label="Mydei — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/tec my.gif" alt="Mydei — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill7" tabindex="-1" aria-label="Mydei — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mydei — Supremo</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/mydei/ult my.gif" alt="Mydei — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Castorice -->
+    <div class="modal fade" id="modalSkill8" tabindex="-1" aria-label="Castorice — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/baisco casto.gif" alt="Castorice — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill9" tabindex="-1" aria-label="Castorice — Garrinha" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Baforada</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/garrinha.gif" alt="Castorice — Garrinha">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill10" tabindex="-1" aria-label="Castorice — Perícia da garra"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Perícia da garra</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/percicia garra.gif" alt="Castorice — Perícia da garra">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill11" tabindex="-1" aria-label="Castorice — Reviver" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Reviver</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/reviver.gif" alt="Castorice — Reviver">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill12" tabindex="-1" aria-label="Castorice — Talento do dragão"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Talento do dragão</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/talento dragão.gif" alt="Castorice — Talento do dragão">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill13" tabindex="-1" aria-label="Castorice — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/tec casto.gif" alt="Castorice — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill14" tabindex="-1" aria-label="Castorice — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Castorice — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/castorice/ult casto.gif" alt="Castorice — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Aglaea -->
+    <div class="modal fade" id="modalSkill15" tabindex="-1" aria-label="Aglaea — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla basic.gif" alt="Aglaea — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill16" tabindex="-1" aria-label="Aglaea — Ataque básico V2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Ataque básico V2</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla basic2.gif" alt="Aglaea — Ataque básico V2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill17" tabindex="-1" aria-label="Aglaea — Perícia do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Perícia do Memosprite</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla pericia memo.gif" alt="Aglaea — Perícia do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill18" tabindex="-1" aria-label="Aglaea — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla skill.gif" alt="Aglaea — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill19" tabindex="-1" aria-label="Aglaea — Talento do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Talento do Memosprite</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla talento memo.webp"
+              alt="Aglaea — Talento do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill20" tabindex="-1" aria-label="Aglaea — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla talento.webp" alt="Aglaea — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill21" tabindex="-1" aria-label="Aglaea — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla tec.gif" alt="Aglaea — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill22" tabindex="-1" aria-label="Aglaea — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aglaea — Supremo</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/aglaea/agla ult.gif" alt="Aglaea — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Anaxa -->
+    <div class="modal fade" id="modalSkill23" tabindex="-1" aria-label="Anaxa — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anaxa — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/anaxa]/anaxa basic.gif" alt="Anaxa — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill24" tabindex="-1" aria-label="Anaxa — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anaxa — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/anaxa]/anaxa pericia.gif" alt="Anaxa — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill25" tabindex="-1" aria-label="Anaxa — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anaxa — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/anaxa]/anaxa tec.gif" alt="Anaxa — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill26" tabindex="-1" aria-label="Anaxa — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anaxa — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/anaxa]/anaxa ult.gif" alt="Anaxa — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill27" tabindex="-1" aria-label="Anaxa — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anaxa — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/anaxa]/talento anaxa.gif" alt="Anaxa — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cerydra -->
+    <div class="modal fade" id="modalSkill28" tabindex="-1" aria-label="Cerydra — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cerydra — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cerydra/cerydra basic.gif" alt="Cerydra — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill29" tabindex="-1" aria-label="Cerydra — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cerydra — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cerydra/cerydra skilllgif.gif" alt="Cerydra — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill30" tabindex="-1" aria-label="Cerydra — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cerydra — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cerydra/cerydra ult.gif" alt="Cerydra — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill31" tabindex="-1" aria-label="Cerydra — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cerydra — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cerydra/talento cerydra.webp" alt="Cerydra — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill32" tabindex="-1" aria-label="Cerydra — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cerydra — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cerydra/tec cerydra.gif" alt="Cerydra — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cipher -->
+    <div class="modal fade" id="modalSkill33" tabindex="-1" aria-label="Cipher — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cipher — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cipher/cipher basic.gif" alt="Cipher — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill34" tabindex="-1" aria-label="Cipher — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cipher — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cipher/cipher pericia.gif" alt="Cipher — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill35" tabindex="-1" aria-label="Cipher — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cipher — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cipher/cipher talento.gif" alt="Cipher — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill36" tabindex="-1" aria-label="Cipher — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cipher — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cipher/cipher tecnica.gif" alt="Cipher — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill37" tabindex="-1" aria-label="Cipher — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cipher — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cipher/cipher ult.gif" alt="Cipher — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cyrene -->
+    <div class="modal fade" id="modalSkill38" tabindex="-1" aria-label="Cyrene — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy basic.gif" alt="Cyrene — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill39" tabindex="-1" aria-label="Cyrene — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy pericia.gif" alt="Cyrene — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill40" tabindex="-1" aria-label="Cyrene — Talento do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Talento do Memoespirito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy talento memo.webp" alt="Cyrene — Talento do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill41" tabindex="-1" aria-label="Cyrene — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy talento.webp" alt="Cyrene — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill42" tabindex="-1" aria-label="Cyrene — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy tec.gif" alt="Cyrene — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill43" tabindex="-1" aria-label="Cyrene — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/cy ult.gif" alt="Cyrene — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill44" tabindex="-1" aria-label="Cyrene — Perícia do Memosprite V2"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Perícia do Memoespirito V2</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/pericia memo 2.gif" alt="Cyrene — Perícia do Memosprite V2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill45" tabindex="-1" aria-label="Cyrene — Perícia do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cyrene — Perícia do Memoespirito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/cyrene/pericia memo.gif" alt="Cyrene — Perícia do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dan heng -->
+    <div class="modal fade" id="modalSkill46" tabindex="-1" aria-label="Dan Heng — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dan Heng — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/dan heng/dan basico.gif" alt="Dan Heng — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill47" tabindex="-1" aria-label="Dan Heng — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dan Heng — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/dan heng/dan pericia.gif" alt="Dan Heng — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill48" tabindex="-1" aria-label="Dan Heng — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dan Heng — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/dan heng/dan talento.gif" alt="Dan Heng — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill49" tabindex="-1" aria-label="Dan Heng — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dan Heng — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/dan heng/dan tecnica.gif" alt="Dan Heng — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill50" tabindex="-1" aria-label="Dan Heng — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dan Heng — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/dan heng/dan ult.gif" alt="Dan Heng — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Evernight -->
+    <div class="modal fade" id="modalSkill51" tabindex="-1" aria-label="Evernight — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever basic.gif" alt="Evernight — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill52" tabindex="-1" aria-label="Evernight — Perícia do Memosprite V2"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Perícia do Memoespirito V2</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever memo skill 2.gif"
+              alt="Evernight — Perícia do Memosprite V2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill53" tabindex="-1" aria-label="Evernight — Perícia do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Perícia do Memoespirito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever memo skill.gif"
+              alt="Evernight — Perícia do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill54" tabindex="-1" aria-label="Evernight — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever skill.gif" alt="Evernight — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill55" tabindex="-1" aria-label="Evernight — Talento do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Talento do Memoespirito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever talento memo.webp"
+              alt="Evernight — Talento do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill56" tabindex="-1" aria-label="Evernight — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever talento.gif" alt="Evernight — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill57" tabindex="-1" aria-label="Evernight — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/ever ult.gif" alt="Evernight — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill58" tabindex="-1" aria-label="Evernight — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Evernight — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/evernight/tec ever.gif" alt="Evernight — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- hyahya -->
+    <div class="modal fade" id="modalSkill59" tabindex="-1" aria-label="Hyacine — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya basic.gif" alt="Hyacine — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill60" tabindex="-1" aria-label="Hyacine — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya skill.gif" alt="Hyacine — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill61" tabindex="-1" aria-label="Hyacine — Talento do Memosprite"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Talento do Memoespirito</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya talento e memo.gif"
+              alt="Hyacine — Talento do Memosprite">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill62" tabindex="-1" aria-label="Hyacine — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya talento ica.gif" alt="Hyacine — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill63" tabindex="-1" aria-label="Hyacine — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya tec.gif" alt="Hyacine — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill64" tabindex="-1" aria-label="Hyacine — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hyacine — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hyacine/hya ult.gif" alt="Hyacine — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hysilens -->
+    <div class="modal fade" id="modalSkill65" tabindex="-1" aria-label="Hysilens — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hysilens — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hysilens/hyse basic.gif" alt="Hysilens — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill66" tabindex="-1" aria-label="Hysilens — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hysilens — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hysilens/hyse skill.gif" alt="Hysilens — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill67" tabindex="-1" aria-label="Hysilens — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hysilens — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hysilens/hyse talento.webp" alt="Hysilens — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill68" tabindex="-1" aria-label="Hysilens — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hysilens — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hysilens/hyse tec1.gif" alt="Hysilens — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill69" tabindex="-1" aria-label="Hysilens — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hysilens — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/hysilens/hyse ult.gif" alt="Hysilens — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tribbie -->
+    <div class="modal fade" id="modalSkill70" tabindex="-1" aria-label="Tribbie — Ataque básico" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tribbie — Ataque básico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/tribbie/tribbie basic.gif" alt="Tribbie — Ataque básico">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill71" tabindex="-1" aria-label="Tribbie — Perícia" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tribbie — Perícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/tribbie/tribbie skill.gif" alt="Tribbie — Perícia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill72" tabindex="-1" aria-label="Tribbie — Talento" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tribbie — Talento</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/tribbie/tribbie talento.gif" alt="Tribbie — Talento">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill73" tabindex="-1" aria-label="Tribbie — Técnica" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tribbie — Técnica</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/tribbie/tribbie tec.gif" alt="Tribbie — Técnica">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSkill74" tabindex="-1" aria-label="Tribbie — Supremo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tribbie — Ultimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+              aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img class="modal-skill-img" src="SKILLS/tribbie/tribbie ult.gif" alt="Tribbie — Supremo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
