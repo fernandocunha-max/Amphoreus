@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amphoreus | Herdeiros de Chrysos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #100e18;
+            color: #f5f0e6;
+        }
+
+        .navbar {
+            background-color: #191526 !important;
+            border-bottom: 1px solid #a88b4a;
+        }
+
+        .navbar-brand {
+            color: #d9bd78 !important;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            color: #e4dced !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #d9bd78 !important;
+        }
+
+        main {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .titulo-amphoreus {
+            color: #d9bd78;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .lista-personagens {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+
+
+
+        .card-personagem .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-personagem .card-body .btn {
+            align-self: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" href="index.html">AMPHOREUS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+                aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="personagens.html">Personagens</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gameplay.html">Gameplay</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explorar
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="index.html">Início</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="personagens.html">Personagens</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="gameplay.html">Gameplay</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="my-4 mx-auto" style="max-width: 850px;">
+
+            <div class="text-center mb-4">
+                <h1 class="titulo-amphoreus">Os Herdeiros de Chrysos</h1>
+            </div>
+
+            <div id="carouselAmphoreus" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner rounded-4">
+
+                    <div class="carousel-item active">
+                        <img src="img/dan heng.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Dan Heng">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalDanHeng">
+                                Ver atributos - Dan Heng
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <img src="img/phainon.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Phainon">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalPhainon">
+                                Ver atributos - Phainon
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <img src="img/castorice.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Castorice">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalCastorice">
+                                Ver atributos - Castorice
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <img src="img/mydei.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Mydei">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalMydei">
+                                Ver atributos - Mydei
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <img src="img/hyahya.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Hyacine">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalHyacine">
+                                Ver atributos - Hyacine
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <img src="img/cerydra.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Cerydra">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalCerydra">
+                                Ver atributos - Cerydra
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <img src="img/cyrene.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Cyrene">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalCyrene">
+                                Ver atributos - Cyrene
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/anaxa.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Anaxa">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalAnaxa">
+                                Ver atributos - Anaxa
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cipher.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Cipher">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalCipher">
+                                Ver atributos - Cipher
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/tribbie.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Tribbie">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalTribbie">
+                                Ver atributos - Tribbie
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/aglaea.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Aglaea">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalAglaea">
+                                Ver atributos - Aglaea
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/evernight.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Evernight">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalEvernight">
+                                Ver atributos - Evernight
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/hyselens.webp" class="d-block w-100"
+                            style="height: min(650px, 75vh); object-fit: contain;" alt="Hysilens">
+
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalHysilens">
+                                Ver atributos - Hysilens
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botão voltar -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmphoreus"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <!-- Botão avançar -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAmphoreus"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próxima</span>
+                </button>
+
+            </div>
+
+
+
+            <!-- Modal de atributos Phainon -->
+            <div class="modal fade" id="modalPhainon" tabindex="-1" aria-labelledby="tituloPhainon" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloPhainon" style="color: #d9bd78;">
+                                Atributos — Phainon
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+
+                            <div class="modal-body">
+
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <strong>Elemento:</strong>
+                                    <img src="img/Type_Physical.webp" alt="Ícone do elemento Físico"
+                                        style="width: 36px; height: 36px; object-fit: contain;">
+                                    <span>Físico</span>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <strong>Caminho:</strong>
+                                    <img src="img/Path_Destruction.webp" alt="Ícone do caminho da Destruição"
+                                        style="width: 36px; height: 36px; object-fit: contain;">
+                                    <span>Destruição</span>
+                                </div>
+
+                                <p><strong>Raridade:</strong> 5 estrelas</p>
+
+                                <p><strong>Função:</strong> Dano principal (DPS)</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">
+                                Fechar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal de atributos Castorice -->
+            <div class="modal fade" id="modalCastorice" tabindex="-1" aria-labelledby="tituloCastorice"
+                aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloCastorice" style="color: #d9bd78;">
+                                Atributos — Castorice
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Quantum.webp" alt="Ícone do elemento Quântico"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Quântico</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Remembrance.webp" alt="Ícone do caminho da Memória"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Recordação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano e invocação</p>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Mydei -->
+            <div class="modal fade" id="modalMydei" tabindex="-1" aria-labelledby="tituloMydei" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloMydei" style="color: #d9bd78;">
+                                Atributos — Mydei
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Imaginary.webp" alt="Ícone do elemento Imaginário"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Imaginário</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Destruction.webp" alt="Ícone do caminho da Destruição"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Destruição</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano principal (DPS)</p>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Modal de atributos Hyacine -->
+            <div class="modal fade" id="modalHyacine" tabindex="-1" aria-labelledby="tituloHyacine" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloHyacine" style="color: #d9bd78;">
+                                Atributos — Hyacine
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Wind.webp" alt="Ícone do elemento Vento"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Vento</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Remembrance.webp" alt="Ícone do caminho da Memória"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Recordação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Cura e suporte</p>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Modal de atributos Cerydra -->
+            <div class="modal fade" id="modalCerydra" tabindex="-1" aria-labelledby="tituloCerydra" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloCerydra" style="color: #d9bd78;">
+                                Atributos — Cerydra
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Wind.webp" alt="Ícone do elemento Vento"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Vento</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Harmony.webp" alt="Ícone do caminho da Harmonia"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Harmonia</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Suporte</p>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Cyrene -->
+            <div class="modal fade" id="modalCyrene" tabindex="-1" aria-labelledby="tituloCyrene" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloCyrene" style="color: #d9bd78;">Atributos — Cyrene
+                            </h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Ice.webp" alt="Ícone do elemento Gelo"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Gelo</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Remembrance.webp" alt="Ícone do caminho da Memória"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Recordação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Suporte e invocação</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Anaxa -->
+            <div class="modal fade" id="modalAnaxa" tabindex="-1" aria-labelledby="tituloAnaxa" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloAnaxa" style="color: #d9bd78;">Atributos — Anaxa</h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Wind.webp" alt="Ícone do elemento Vento"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Vento</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Erudition.webp" alt="Ícone do caminho da Erudição"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Erudição</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano e enfraquecimento de inimigos</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal de atributos Cipher -->
+            <div class="modal fade" id="modalCipher" tabindex="-1" aria-labelledby="tituloCipher" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloCipher" style="color: #d9bd78;">Atributos — Cipher
+                            </h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Quantum.webp" alt="Ícone do elemento Quântico"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Quântico</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Nihility.webp" alt="Ícone do caminho da Nihilidade"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Inexistencia</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano e suporte de enfraquecimento</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Tribbie -->
+            <div class="modal fade" id="modalTribbie" tabindex="-1" aria-labelledby="tituloTribbie" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloTribbie" style="color: #d9bd78;">Atributos — Tribbie
+                            </h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Quantum.webp" alt="Ícone do elemento Quântico"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Quântico</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Harmony.webp" alt="Ícone do caminho da Harmonia"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Harmonia</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Suporte e dano em área</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Aglaea -->
+            <div class="modal fade" id="modalAglaea" tabindex="-1" aria-labelledby="tituloAglaea" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloAglaea" style="color: #d9bd78;">Atributos — Aglaea
+                            </h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Lightning.webp" alt="Ícone do elemento Raio"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Raio</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Remembrance.webp" alt="Ícone do caminho da Memória"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Recordação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano principal com invocação</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal de atributos Evernight -->
+            <div class="modal fade" id="modalEvernight" tabindex="-1" aria-labelledby="tituloEvernight"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloEvernight" style="color: #d9bd78;">Atributos —
+                                Evernight</h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Ice.webp" alt="Ícone do elemento Gelo"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Gelo</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Remembrance.webp" alt="Ícone do caminho da Memória"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Recordação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano e suporte com invocação</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Modal de atributos Hysilens -->
+            <div class="modal fade" id="modalHysilens" tabindex="-1" aria-labelledby="tituloHysilens"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloHysilens" style="color: #d9bd78;">Atributos —
+                                Hysilens</h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Physical.webp" alt="Ícone do elemento Físico"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Físico</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Nihility.webp" alt="Ícone do caminho da Nihilidade"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Inexistencia</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Dano contínuo e enfraquecimento de inimigos</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal de atributos Dan Heng -->
+            <div class="modal fade" id="modalDanHeng" tabindex="-1" aria-labelledby="tituloDanHeng" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content"
+                        style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="tituloDanHeng" style="color: #d9bd78;">
+                                Atributos — Dan Heng
+                            </h2>
+
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Elemento:</strong>
+                                <img src="img/Type_Physical.webp" alt="Ícone do elemento Fisico"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Fisico</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <strong>Caminho:</strong>
+                                <img src="img/Path_Preservation.webp" alt="Ícone do caminho da Preservação"
+                                    style="width: 36px; height: 36px; object-fit: contain;">
+                                <span>Preservação</span>
+                            </div>
+
+                            <p><strong>Raridade:</strong> 5 estrelas</p>
+                            <p><strong>Função:</strong> Suporte Sustain e dano</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">
+                                Fechar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

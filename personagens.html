@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personagens | Amphoreus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #100e18;
+            color: #f5f0e6;
+        }
+
+        .navbar {
+            background-color: #191526 !important;
+            border-bottom: 1px solid #a88b4a;
+        }
+
+        .navbar-brand {
+            color: #d9bd78 !important;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            color: #e4dced !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #d9bd78 !important;
+        }
+
+        .titulo-amphoreus {
+            color: #d9bd78;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .card-personagem {
+            background-color: #191526;
+            color: #f5f0e6;
+            border: 1px solid #a88b4a;
+            height: 100%;
+        }
+
+        .card-personagem img {
+            height: 300px;
+            object-fit: contain;
+            padding: 10px;
+        }
+
+        .card-personagem .card-title {
+            color: #d9bd78;
+        }
+
+
+
+        .card-personagem .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card-personagem .card-body .btn {
+            align-self: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                AMPHOREUS
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="personagens.html">Personagens</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gameplay.html">Gameplay</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explorar
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li><a class="dropdown-item" href="index.html">Início</a></li>
+                            <li><a class="dropdown-item" href="personagens.html">Personagens</a></li>
+                            <li><a class="dropdown-item" href="gameplay.html">Gameplay</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <header class="text-center mb-5">
+            <h1 class="titulo-amphoreus">Herdeiros de Chrysos</h1>
+            <p class="text-secondary">
+                Conheça os personagens de Amphoreus.
+            </p>
+        </header>
+
+        <section class="row g-4 lista-personagens">
+<!-- Phainon -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/phainon.webp" class="card-img-top" alt="Phainon">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Phainon - Khaslana</h2>
+                        <p class="card-text">
+                            Um guerreiro ligado ao destino de Amphoreus.
+                        </p>
+
+
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#modalPhainon">
+                            Saiba mais
+                        </button>
+
+
+
+
+
+
+                    </div>
+                </article>
+            </div>
+            <!-- Castorice -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/castorice.webp" class="card-img-top" alt="Castorice">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Castorice</h2>
+                        <p class="card-text">
+                            Uma personagem misteriosa associada à morte.
+                        </p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#modalCastorice">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            </article>
+            </div>
+
+
+            <!-- MYDEI -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/mydei.webp" class="card-img-top" alt="Mydei">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Mydei - Mydeimos</h2>
+                        <p class="card-text">
+                            Um guerreiro de grande força e determinação.
+                        </p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#modalMydei">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            </article>
+            </div>
+
+
+
+            <!-- HYACINE -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/hyahya.webp" class="card-img-top" alt="Hyacine">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Hyacine - Hyacinthia</h2>
+                        <p class="card-text">Uma curandeira que protege seus aliados.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalHyacine">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CERYDRA -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/cerydra.webp" class="card-img-top" alt="Cerydra">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Cerydra</h2>
+                        <p class="card-text">Uma figura de liderança e estratégia em Amphoreus.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalCerydra">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CYRENE -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/cyrene.webp" class="card-img-top" alt="Cyrene">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Cyrene - Elysia</h2>
+                        <p class="card-text">Uma personagem ligada às memórias e ao destino do mundo.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalCyrene">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ANAXA -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/anaxa.webp" class="card-img-top" alt="Anaxa">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anaxa - Anaxagoras</h2>
+                        <p class="card-text">Um estudioso que busca compreender os mistérios do universo.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalAnaxa">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CIPHER -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/cipher.webp" class="card-img-top" alt="Cipher">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Cipher - Cifera</h2>
+                        <p class="card-text">Uma personagem astuta, conhecida por seus segredos.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalCipher">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- TRIBBIE -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/tribbie.webp" class="card-img-top" alt="Tribbie">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Tribbie - Tribios</h2>
+                        <p class="card-text">Uma personagem importante na jornada pelos mistérios de Amphoreus.
+                        </p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalTribbie">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- AGLAEA -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/aglaea.webp" class="card-img-top" alt="Aglaea">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Aglaea</h2>
+                        <p class="card-text">Uma figura central entre os Herdeiros de Chrysos.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalAglaea">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- EVERNIGHT -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/evernight.webp" class="card-img-top" alt="Evernight">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Evernight</h2>
+                        <p class="card-text">Uma personagem envolta em mistérios relacionados à memória.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalEvernight">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- HYSILENS -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/hyselens.webp" class="card-img-top" alt="Hysilens">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Hysilens - Helektra</h2>
+                        <p class="card-text">Uma guerreira ligada aos conflitos e aos segredos de Amphoreus.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalHysilens">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- DAN HENG -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="card card-personagem">
+                    <img src="img/dan heng.webp" class="card-img-top" alt="Dan Heng">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Dan Heng - Terravox</h2>
+                        <p class="card-text">Um guerreiro reservado que luta com precisão e velocidade.</p>
+                        <button type="button" class="btn btn-outline-warning mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalDanHeng">
+                            Saiba mais
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+
+
+
+
+
+
+            </article>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <div class="modal fade" id="modalPhainon" tabindex="-1" aria-labelledby="tituloModalPhainon" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #191526; color: #f5f0e6; border: 1px solid #a88b4a;">
+
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalPhainon" style="color: #d9bd78;">
+                        Phainon
+                    </h2>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    Um guerreiro de Aedes Elysiae, o semideus do "Sustento do Mundo", Fator Experimental "NeiKos496".
+                    Como receptáculo perfeito, ele optou por usar a si mesmo para aprisionar Irontomb, trazendo o
+                    alvorecer ao fim dos ciclos.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- MODAL HYACINE -->
+    <div class="modal fade" id="modalHyacine" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Hyacine</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">A curadora do Pátio do Crepúsculo, a semideusa do "Céu", Fator Experimental
+                    "EleOs252".
+                    Ela possui uma índole otimista e alegre, e sabe ouvir muito bem. Neste mundo instável e moribundo,
+                    ela se esforça ao máximo para irradiar sobre os outros o tênue brilho da cura.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CERYDRA -->
+    <div class="modal fade" id="modalCerydra" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Cerydra</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">A soberana de Hiperbórea, A semideusa da "Lei", Fator Experimental "HubRis504".
+                    A única e inigualável Imperadora de Anforeus, que joga xadrez com os deuses e redige novas leis, na
+                    esperança de que Amphoreus permaneça independente entre as estrelas.
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CYRENE -->
+    <div class="modal fade" id="modalCyrene" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Cyrene</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Demiurge, filha de Aedes Elysiae, a Filha Pura de Amphoreus, nascida de
+                    Anāsrava, e a "Alma" do Cetro δ-me13.
+                    Ao final da epopeia, as memórias desta donzela fluem de volta pelo tempo, transformando-se em
+                    "PhiLia093" no início dos tempos, completando o ciclo de causalidade.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ANAXA -->
+    <div class="modal fade" id="modalAnaxa" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Anaxa</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Um estudioso do Bosque da Epifania, o semideus da "Razão", Fator Experimental
+                    "SkeMma720".
+                    Ele estabeleceu a Teoria Nouspore, refutou os Titãs e os gênios, e revelou a verdadeira natureza do
+                    mundo de Amphoreus.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CIPHER -->
+    <div class="modal fade" id="modalCipher" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Cipher</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Uma ladra de Dolos, o semideus da "Trapaça" — Fator Experimental "OreXis945".
+                    Dotada de uma velocidade divina, ela parece indiferente à "Perseguição da Chama" (Flame-Chase).
+                    Contudo, por meio do engano, ela tem sustentado a luz de Okhema ao longo de um milênio.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TRIBBIE -->
+    <div class="modal fade" id="modalTribbie" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Tribbie</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">A Santa Donzela de Janusópolis, semideusa da "Passagem", Fator Experimental
+                    "HapLotes405".
+                    A primeira semideusa de Amphoreus, que pagou o preço de uma Chama do Núcleo e regrediu à forma de
+                    uma criança, guiando os Herdeiros de Chrysos através da profecia.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AGLAEA -->
+    <div class="modal fade" id="modalAglaea" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Aglaea</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">A líder de Okhema, a semideusa do "Romance", Fator Experimental "KaLos618".
+                    Como uma tecelã, ela mesma passa a linha na agulha, reunindo heróis de todo o mundo para tecer o
+                    futuro de Amphoreus..</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EVERNIGHT -->
+    <div class="modal fade" id="modalEvernight" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Evernight</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Uma visitante misteriosa que surge nas frestas das memórias, com uma aparência
+                    idêntica à de March 7th — como dois lados da mesma moeda.
+                    March 7th entrega suas memórias e cai em um sono profundo, enquanto Evernight se oculta ao liberar
+                    ondas de "Esquecimento".</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL HYSILENS -->
+    <div class="modal fade" id="modalHysilens" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Hysilens</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">A sereia do antigo reino sob o mar, o semideus do "Oceano", Fator Experimental
+                    "ApoRia432".
+                    Um cavaleiro conhecido como "Gladius", que luta sozinho contra o Nada há mais de mil anos, tudo em
+                    busca de esperança para Amphoreus.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DAN HENG -->
+    <div class="modal fade" id="modalDanHeng" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" style="color:#d9bd78;">Dan Heng</h2>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Uma nova divindade que recebeu o Núcleo Flamejante da Terra de Terravox; ele é
+                    um guardião do Expresso Astral.
+                    Ao desprender-se de suas escamas de dragão marcadas por cicatrizes, ele abraça o passado e o futuro
+                    com a Permanência, e aguarda o momento em que a jornada recomeçará.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- MODAL CASTORICE -->
+    <div class="modal fade" id="modalCastorice" tabindex="-1" aria-labelledby="tituloModalCastorice" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalCastorice" style="color:#d9bd78;">
+                        Castorice
+                    </h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    A Donzela da Guerra de Aidonia, semideusa da "Morte", Fator Experimental "EpieiKeia216".
+                    Após descobrir suas origens, ela superou a provação, unindo as mãos gêmeas da morte e assegurando o
+                    fluxo ordenado da vida e da morte no mundo.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- MODAL MYDEI -->
+    <div class="modal fade" id="modalMydei" tabindex="-1" aria-labelledby="tituloModalMydei" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background:#191526; color:#f5f0e6; border:1px solid #a88b4a;">
+
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalMydei" style="color:#d9bd78;">
+                        Mydei
+                    </h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    "Sou o príncipe herdeiro de Kremnos, 'Mydeimos', e também o guerreiro de Okhema, 'Mydei'. Se quiser
+                    me conhecer melhor, observe-me em batalha ou lute você mesmo contra mim."
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
